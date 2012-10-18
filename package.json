@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "keywords": ["membership management"],
   "dependencies": {
-    "rolodex": "0.7.2"
+	"express": "3.0.0",
+    "passport": "0.1.12",
+    "ejs": "0.8.3",
+    "simpledb": "0.0.8"
   },
-  "devDependencies": {
-    "mocha": "0.10.2",
-    "should": "0.5.1"
-  },
+
   "engines": { "node": "*" },
   "licenses" : [
     { 
