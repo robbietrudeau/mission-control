@@ -32,18 +32,18 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate(..., function (err, user) {
-      if (err) { return done(err); }
-      done(null, user);
-    });
+    // User.findOrCreate('robbie', function (err, user) {
+    //   if (err) { return done(err); }
+    //   done(null, user);
+    // });
   }
 ));
 app.get('/', routes.index);
 
 app.get('/auth/facebook', passport.authenticate('facebook'));
 
-app.get('/auth/facebook/callback', 
-  passport.authenticate('facebook', { successRedirect: '/',
+app.get('/auth/provider/callback', 
+  passport.authenticate('provider', { successRedirect: '/',
                                       failureRedirect: '/login' }));
 
 app.listen(3000, function(){
