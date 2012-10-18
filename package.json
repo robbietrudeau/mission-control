@@ -5,6 +5,8 @@
   "keywords": ["membership management"],
   "dependencies": {
     "express": "2.5.8",
-    "ejs": ">= 0.0.1"
-  },
+    "ejs": ">= 0.0.1",
+    "passport": "0.1.x",
+    "passport-facebook": "0.1.x"
+  }
 }
