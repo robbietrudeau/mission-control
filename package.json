@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "keywords": ["membership management"],
   "dependencies": {
-    "rolodex": "0.7.2",
-    "twitter-bootstrap-node"
+    "rolodex": "0.7.2"
   },
   "devDependencies": {
     "mocha": "0.10.2",
