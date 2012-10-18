@@ -1,0 +1,20 @@
+{
+  "name": "mission-control",
+  "description": "Membership system for Incubators and Accelerators and Ray!",
+  "version": "0.0.1",
+  "keywords": ["membership management"],
+  "dependencies": {
+    "rolodex": "0.7.2"
+  },
+  "devDependencies": {
+    "mocha": "0.10.2",
+    "should": "0.5.1"
+  },
+  "engines": { "node": "*" },
+  "licenses" : [
+    { 
+      "type" : "MIT",
+      "url" : "https://raw.github.com/robbietrudeau/mission-control/master/README.md"
+    }
+  ]
+}
