@@ -32,19 +32,32 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    // User.findOrCreate('robbie', function (err, user) {
+		return done(null, {});
+		
+    // User.findOrCreate(..., function (err, user) {
     //   if (err) { return done(err); }
     //   done(null, user);
     // });
   }
 ));
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
+
 app.get('/', routes.index);
 
 app.get('/auth/facebook', passport.authenticate('facebook'));
 
-app.get('/auth/provider/callback', 
-  passport.authenticate('provider', { successRedirect: '/',
+app.get('/auth/facebook/callback', 
+  passport.authenticate('facebook', { successRedirect: '/',
                                       failureRedirect: '/login' }));
+
+
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
