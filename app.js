@@ -40,10 +40,10 @@ passport.use(new FacebookStrategy({
 ));
 app.get('/', routes.index);
 
-app.get('/auth/provider', passport.authenticate('provider'));
+app.get('/auth/facebook', passport.authenticate('facebook'));
 
-app.get('/auth/provider/callback', 
-  passport.authenticate('provider', { successRedirect: '/',
+app.get('/auth/facebook/callback', 
+  passport.authenticate('facebook', { successRedirect: '/',
                                       failureRedirect: '/login' }));
 
 app.listen(3000, function(){
